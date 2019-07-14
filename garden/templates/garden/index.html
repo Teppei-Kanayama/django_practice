@@ -11,10 +11,11 @@
 <img src="{% static 'garden/images/myamori.jpeg' %}" alt="野菜">
 <h3>美味しい採れたての野菜</h3>
 <ul>
-    <li>玉ねぎ</li>
-    <li>トマト</li>
-    <li>ナス</li>
-    <li>きゅうり</li>
+    {% for vegetable in vegetables %}
+    <li>
+        {{ vegetable.name }}
+    </li>
+    {% endfor %}
 </ul>
 <br>
 <!-- この下にformを追加 -->
